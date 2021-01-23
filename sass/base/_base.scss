@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    @include respond(tab-land) { //width <1200
+        font-size: 56.25%;
+      }
+      @include respond(tab-port) { // width < 900 
+        font-size: 50%;
+      }
+      @include respond(phone) { // width < 600 
+        font-size: 44%;
+      }
+      @include respond(big-desktop) {
+        font-size: 78%;
+      }
+}

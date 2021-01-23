@@ -1,0 +1,134 @@
+section{
+    min-height: 100vh;
+    background-color: black;
+    padding: 8rem 6rem;
+    @include respond(small-screen) { // width < 900 
+        padding: 5rem 1rem;
+    }
+}
+
+img{
+    height: 50rem;
+    @include respond(tab-port) { // width < 900 
+        height: 40rem;
+      }
+}
+
+
+.sec-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @include respond(tab-port) { // width < 900 
+        flex-direction: column;
+    }
+    
+    &__right{
+        max-width: 90rem;
+        width: 65%;
+        padding: 3rem; 
+        @include respond(tab-port) { // width < 900 
+           width: 100%;
+        }
+        @include respond(phone) { // width < 900 
+            padding: 2rem;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+
+.sec-2{
+    
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    @include respond(tab-port) { // width < 900 
+        flex-direction: column;
+    }
+
+    .points{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__left{
+        @include respond(tab-port) { // width < 900 
+            order: -1;
+        }
+    }
+
+    &__right{
+        max-width: 90rem;
+        width: 65%;
+        padding: 3rem;
+        @include respond(tab-port) { // width < 900 
+            max-width: 90rem;
+            width: 100%;
+        }
+
+        p{
+            width: 70%;
+            text-align: justify;
+            @include respond(tab-port) { // width < 900 
+                width: 100%;  
+            }
+
+            &:nth-last-of-type(even){
+                align-self: flex-end;
+                @include respond(tab-port) { // width < 900 
+                    align-self: center;    
+                }
+            }
+        }
+    }
+}
+
+
+.sec-3{
+    
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    @include respond(tab-port) { // width < 900 
+        flex-direction: column;
+    }
+
+    .points{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+        grid-template-rows: 1fr 1fr;
+        
+        @include respond(tab-port) { // width < 900 
+            grid-template-columns: 1fr;
+            grid-gap: 3rem;
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__left{
+        @include respond(tab-port) { // width < 900 
+            order: -1;
+        }
+    }
+
+    &__right{
+        max-width: 90rem;
+        width: 65%;
+        padding: 3rem;
+
+        @include respond(tab-port) { // width < 900 
+            max-width: 100%;
+            width: 100%;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
+}
